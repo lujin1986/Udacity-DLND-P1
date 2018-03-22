@@ -47,7 +47,6 @@ class NeuralNetwork(object):
 		for X, y in zip(features, targets):
             
 			final_outputs, hidden_outputs = self.forward_pass_train(X)  # Implement the forward pass function below
-			print(final_outputs, hidden_outputs) 
 			# Implement the backproagation function below
 			delta_weights_i_h, delta_weights_h_o = self.backpropagation(final_outputs, hidden_outputs, X, y, 
                                                                         delta_weights_i_h, delta_weights_h_o)
@@ -144,7 +143,7 @@ class NeuralNetwork(object):
 #########################################################
 # Set your hyperparameters here
 ##########################################################
-iterations = 2000
-learning_rate = 0.006
-hidden_nodes = 4
-output_nodes = 3
+iterations = 4000
+learning_rate = 0.005
+hidden_nodes = 5
+output_nodes = 1
